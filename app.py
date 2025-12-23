@@ -36,6 +36,8 @@ def home():
 
 @app.route("/webhook", methods=["GET", "POST"])
 def webhook():
+    print("🔥 MENSAJE RECIBIDO EN WEBHOOK 🔥")
+
     if request.method == "GET":
         mode = request.args.get("hub.mode")
         token = request.args.get("hub.verify_token")
